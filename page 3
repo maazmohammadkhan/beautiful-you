@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautifully You</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #fde1d9, #ffb6b9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            padding: 50px;
+        }
+        .item {
+            flex: 1 1 200px;
+            height: 200px;
+            border-radius: 20px;
+            color: #fff;
+            font-size: 1.5em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        .item img {
+            width: 80px;
+            height: 80px;
+            transition: transform 0.3s ease;
+            margin-bottom: 10px;
+        }
+        .item::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-image: url('plus-icon.png');
+            width: 24px;
+            height: 24px;
+        }
+        .item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        .item:hover img {
+            transform: scale(1.2);
+        }
+        .t-shirts { background-color: #5f27cd; }
+        .hoodies { background-color: #ee5253; }
+        .caps { background-color: #0abde3; }
+        .posters { background-color: #10ac84; }
+        .bandanas { background-color: #ff9ff3; }
+        .jewelry { background-color: #feca57; }
+        .logo {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            font-family: 'Brush Script MT', cursive;
+            font-size: 5em;
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            right: 50px;
+            transform: translateY(-50%);
+            white-space: nowrap;
+        }
+        /* Responsive adjustments */
+        @media (max-width: 800px) {
+            .container {
+                padding: 20px;
+            }
+            .item {
+                flex-basis: 150px;
+                height: 150px;
+            }
+            .logo {
+                font-size: 3em;
+                right: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item t-shirts">
+            <img src="t-shirts.png" alt="T-Shirts">
+            <span>T-shirts</span>
+        </div>
+        <div class="item hoodies">
+            <img src="hoodies.png" alt="Hoodies">
+            <span>Hoodies</span>
+        </div>
+        <div class="item caps">
+            <img src="caps.png" alt="Caps">
+            <span>Caps</span>
+        </div>
+        <div class="item posters">
+            <img src="posters.png" alt="Posters">
+            <span>Posters</span>
+        </div>
+        <div class="item bandanas">
+            <img src="bandanas.png" alt="Bandanas">
+            <span>Bandanas</span>
+        </div>
+        <div class="item jewelry">
+            <img src="jewelry.png" alt="Jewelry">
+            <span>Jewelry</span>
+        </div>
+    </div>
+    <div class="logo">Beautifully You.</div>
+</body>
+</html>
